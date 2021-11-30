@@ -1,7 +1,8 @@
 import './App.css';
 import Contact from './components/Contact/Contact';
 import Intro from './components/Intro/Intro';
-import Navigation from './components/Shared/Navigation';
+import Footer from './components/Shared/Footer/Footer';
+import Navigation from './components/Shared/Navigation/Navigation';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Navigation />
       <Intro />
       <Contact />
+      <Footer />
     </div>
   );
 }

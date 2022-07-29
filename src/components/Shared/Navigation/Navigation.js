@@ -4,9 +4,9 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 const Navigation = () => {
     return (
         <>
-            <Navbar bg="dark" variant="dark" expand="md">
+            <Navbar bg="dark" variant="dark" expand="md" fixed="top">
                 <Container>
-                    <Navbar.Brand href="#home">Taki Kauser</Navbar.Brand>
+                    <Navbar.Brand href="#home" className="fw-bold">Taki Kauser</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mx-auto">

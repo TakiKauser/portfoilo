@@ -17,8 +17,8 @@ const Contact = () => {
     };
     return (
         <div className='container py-5' id='contact'>
-            <h2 className='mb-5'>GET IN TOUCH</h2>
-            <section className="gap-5 row">
+            {/* <h2 className='mb-5'>GET IN TOUCH</h2> */}
+            <section className="gap-5 row d-flex flex-column flex-lg-row justify-content-center align-items-center">
                 <div className="col-md-4 col-xs-12">
                     <div className="mt-4 text-start">
                         <h3>Let's Work Together!</h3>
@@ -31,22 +31,25 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="col-md-7 col-xs-12">
+                    <div className="title">
+                        <h2 className='mb-5 text-start p-1'>GET IN TOUCH</h2>
+                    </div>
                     <form className="contact-form" onSubmit={sendEmail}>
                         <input type="hidden" name="contact_number" />
-                        <div className="mb-3">
+                        <div className="mb-3 text-start">
                             <label htmlFor="name" className="form-label">Name</label>
                             <input type="text" name="name" className="form-control" id="name" />
                         </div>
-                        <div className="mb-3">
+                        <div className="mb-3 text-start">
                             <label htmlFor="email" className="form-label">Email</label>
                             <input type="email" name="email" className="form-control" id="email" />
-                            <div id="emailSecurity" className="text-white form-text">We'll never share your email with anyone else.</div>
+                            <span id="emailSecurity" className="form-text" style={{color: "yellow"}}><small>We'll never share your email with anyone else.</small></span>
                         </div>
-                        <div className="mb-3">
+                        <div className="mb-3 text-start">
                             <label htmlFor="message" className="form-label">Message</label>
                             <textarea name="message" className="form-control" id="message" />
                         </div>
-                        <input className="btn btn-outline-light" type="submit" value="Send" />
+                        <input className="btn btn-outline-light px-5 py-2" type="submit" value="Send" />
                     </form>
                 </div>
             </section>

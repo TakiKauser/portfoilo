@@ -6,12 +6,11 @@ import Typical from 'react-typical';
 const Intro = () => {
     return (
         <>
-            <section className='container my-5'>
+            <section className='container my-5' id="intro">
                 <div className='row d-flex align-items-center justify-content-center'>
                     <div className="col-md-6 col-sm-12">
                         <div className="header-content">
-                            {/* <h3>WELCOME</h3 > */}
-                            <h1>I AM TAKI KAUSER</h1>
+                            <h1 className="mt-5 mt-lg-0">I'm <span style={{ color: "yellow" }}>TAKI KAUSER</span></h1>
                             <p className="type-effect">
                                 <Typical
                                     steps={[
@@ -26,12 +25,14 @@ const Intro = () => {
                                     wrapper="b"
                                 />
                             </p>
-                            <Button variant="light" className=" bg-dark">
-                                <a className="text-white text-decoration-none" target='_blank' rel='noreferrer' href="https://drive.google.com/file/d/1TUPfpPUBE9jfXwg5RRkInOUXnVJ-sccg/view?usp=sharing">DOWNLOAD RESUME </a>
-                            </Button>
-                            <Button variant="light" className="bg-dark ms-3">
-                                <a className="text-white text-decoration-none" target='_blank' rel='noreferrer' href="https://www.linkedin.com/in/taki-kauser/" >GET IN TOUCH</a>
-                            </Button>
+                            <div className="d-flex flex-column flex-sm-row justify-content-center align-items-center">
+                                <Button variant="light" className=" bg-dark">
+                                    <a className="text-white text-decoration-none" target='_blank' rel='noreferrer' href="https://drive.google.com/file/d/1TUPfpPUBE9jfXwg5RRkInOUXnVJ-sccg/view?usp=sharing">DOWNLOAD RESUME </a>
+                                </Button>
+                                <Button variant="light" className="bg-dark ms-sm-3 mt-3 mt-sm-0">
+                                    <a className="text-white text-decoration-none" target='_blank' rel='noreferrer' href="https://www.linkedin.com/in/taki-kauser/" >GET IN TOUCH</a>
+                                </Button>
+                            </div>
                         </div>
                     </div>
                     <div className="col-md-6 col-sm-12">

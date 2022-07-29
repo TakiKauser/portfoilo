@@ -37,9 +37,11 @@ const Projects = () => {
     ]
     return (
         <>
-            <div id="my-project" className="project-container">
+            <div id="projects" className="project-container">
                 <Container>
-                    <h2 className="py-5 text-center">My Recent Projects</h2>
+                    <div className="title my-3 my-lg-5">
+                        <h2 className="p-1 text-start">My Recent Projects</h2>
+                    </div>
                     <Row xs={1} md={1} lg={2} className="g-4">
                         {projects.map((project, index) => (
                             <Col key={index} id="" className="">

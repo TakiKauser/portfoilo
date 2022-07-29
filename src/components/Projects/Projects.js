@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 import "./Projects.css";
@@ -40,127 +40,77 @@ const Projects = () => {
             <div id="my-project" className="project-container">
                 <Container>
                     <h2 className="py-5 text-center">My Recent Projects</h2>
-                    <Row xs={1} md={2} lg={3} className="g-4">
-                        {projects.map(project => (
-                            <div id="container">
-
-                                <div class="product-details">
-
-                                    <h1>{project?.title}</h1>
-
-                                    <p class="information">{project?.des}</p>
-
-                                    {/* <div class="control">
-
-                                        <button class="btn">
-                                            <span class="price">$250</span>
-                                            <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                                            <span class="buy">Get now</span>
-                                        </button>
-
-                                    </div> */}
-                                    <Link to={`/home/details/${project?.id}`}>
-                                        <button className="px-3 btn btn-light" >
-                                            PROJECT DETAILS
-                                        </button>
-                                    </Link>
-                                </div>
-
-                                <div class="product-image">
-
-                                    <img src={project?.img} alt="webpage-ss" />
-
-
-                                    <div class="info">
-                                        {/* <h2> Description</h2>
-                                        <ul>
-                                            <li><strong>Height : </strong>5 Ft </li>
-                                            <li><strong>Shade : </strong>Olive green</li>
-                                            <li><strong>Decoration: </strong>balls and bells</li>
-                                            <li><strong>Material: </strong>Eco-Friendly</li>
-                                        </ul> */}
-                                        <div class="mx-auto my-5">
-                                            <a href={project?.live} target="_blank" rel="noreferrer">
-                                                <button class="link-btn">
-                                                    <span class="price">
-                                                        Live
-                                                    </span>
-                                                    <span class="shopping-cart">
-                                                        <i class="fa fa-link" aria-hidden="true">
-                                                        </i>
-                                                    </span>
-                                                    <span class="buy">
-                                                        Site
-                                                    </span>
-                                                </button>
-                                            </a>
-                                        </div>
-                                        <div class="mx-auto my-5">
-                                            <a href={project?.gitclient} target="_blank" rel="noreferrer">
-                                                <button class="link-btn">
-                                                    <span class="price">
-                                                        Client
-                                                    </span>
-                                                    <span class="shopping-cart">
-                                                        <i class="fa fa-code" aria-hidden="true">
-                                                        </i>
-                                                    </span>
-                                                    <span class="buy">
-                                                        Side
-                                                    </span>
-                                                </button>
-                                            </a>
-                                        </div>
-                                        {
-                                            project?.gitserver &&
-                                            <div class="mx-auto my-5">
-                                                <a href={project?.gitserver} target="_blank" rel="noreferrer">
-                                                    <button class="link-btn">
-                                                        <span class="price">
-                                                            Server
+                    <Row xs={1} md={1} lg={2} className="g-4">
+                        {projects.map((project, index) => (
+                            <Col key={index} id="" className="">
+                                <div id="container" className="d-flex flex-column flex-lg-row">
+                                    <div className="product-details">
+                                        <h1>{project?.title}</h1>
+                                        <p className="information">{project?.des}</p>
+                                        <Link to={`/home/details/${project?.id}`}>
+                                            <button className="px-3 btn btn-light" >
+                                                PROJECT DETAILS
+                                            </button>
+                                        </Link>
+                                    </div>
+                                    <div className="product-image">
+                                        <img src={project?.img} alt="webpage-ss" className="" />
+                                        <div className="info">
+                                            <div className="mx-auto my-5">
+                                                <a href={project?.live} target="_blank" rel="noreferrer">
+                                                    <button className="link-btn">
+                                                        <span className="price">
+                                                            Live
                                                         </span>
-                                                        <span class="shopping-cart">
-                                                            <i class="fa fa-code" aria-hidden="true">
+                                                        <span className="shopping-cart">
+                                                            <i className="fa fa-link" aria-hidden="true">
                                                             </i>
                                                         </span>
-                                                        <span class="buy">
+                                                        <span className="buy">
+                                                            Site
+                                                        </span>
+                                                    </button>
+                                                </a>
+                                            </div>
+                                            <div className="mx-auto my-5">
+                                                <a href={project?.gitclient} target="_blank" rel="noreferrer">
+                                                    <button className="link-btn">
+                                                        <span className="price">
+                                                            Client
+                                                        </span>
+                                                        <span className="shopping-cart">
+                                                            <i className="fa fa-code" aria-hidden="true">
+                                                            </i>
+                                                        </span>
+                                                        <span className="buy">
                                                             Side
                                                         </span>
                                                     </button>
                                                 </a>
                                             </div>
-                                        }
-
-
-                                        {/* <Link to={`/home/details/${project.id}`}><button className="banner-button" >Details</button></Link> */}
-                                        {/* </ul> */}
+                                            {
+                                                project?.gitserver &&
+                                                <div className="mx-auto my-5">
+                                                    <a href={project?.gitserver} target="_blank" rel="noreferrer">
+                                                        <button className="link-btn">
+                                                            <span className="price">
+                                                                Server
+                                                            </span>
+                                                            <span className="shopping-cart">
+                                                                <i className="fa fa-code" aria-hidden="true">
+                                                                </i>
+                                                            </span>
+                                                            <span className="buy">
+                                                                Side
+                                                            </span>
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                            }
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            // <div className="">
-                            //     <ul>
-                            //         <li className="booking-card h-100" style={{ backgroundImage: `url(${project?.img})`, height: "100%" }}>
-                            //             <div className="book-container">
-                            //                 <div className="content">
-                            //                 </div>
-                            //             </div>
-                            //             <div className="informations-container">
-                            //                 <h2 className="title">{project?.title}</h2>
-                            //                 <p className="sub-title">{project?.tech}</p>
-
-                            //                 <div className="more-information">
-                            //                     <div className="info-and-date-container">
-                            //                     </div>
-                            //                     <a href={project.live} rel="noreferrer" target="_blank"><button className="m-2 banner-button" >Website Link</button></a>
-                            //                     <Link to={`/home/details/${project.id}`}><button className="banner-button" >Details</button></Link>
-                            //                 </div>
-
-                            //             </div>
-                            //         </li>
-
-                            //     </ul>
-                            // </div>
-
+                            </Col>
                         ))}
                     </Row>
                 </Container>
